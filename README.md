@@ -10,23 +10,15 @@ Este é um portal de entretenimento com diferentes seções para todas as idades
 
 ## 🚀 Como Acessar
 
-Para acessar o site, você tem duas opções:
+### Link do Site
+🌐 [Acesse o Portal de Entretenimento](https://alexandre9859.github.io/Portal-do-Entreterimento)
 
-### 1. Localmente
-1. Clone este repositório
+### Acesso Local
+1. Clone este repositório:
+```bash
+git clone https://github.com/Alexandre9859/Portal-do-Entreterimento.git
+```
 2. Abra o arquivo `index.html` em seu navegador
-
-### 2. Online
-Para acessar online, você precisa:
-
-1. Criar um repositório no GitHub
-2. Fazer upload dos arquivos
-3. Ativar o GitHub Pages nas configurações do repositório:
-   - Vá em "Settings" > "Pages"
-   - Em "Source", selecione "main" branch
-   - Clique em "Save"
-
-O site estará disponível em: `https://seu-usuario.github.io/nome-do-repositorio`
 
 ## 💻 Tecnologias Utilizadas
 
