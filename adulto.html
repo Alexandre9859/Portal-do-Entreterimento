@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carreira Tech</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/index/Adulto.ico" type="image/x-icon">
+</head>
+<body class="adulto">
+    <div class="container adulto-content">
+        <h1>Cargos e Salários em TI</h1>
+        
+        <div class="content-section">
+            <h2>Explore as Carreiras</h2>
+            <p>Clique nos cargos para ver mais informações</p>
+
+            <table class="salary-table">
+                <thead>
+                    <tr>
+                        <th>Cargo</th>
+                        <th>Júnior</th>
+                        <th>Pleno</th>
+                        <th>Sênior</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td onclick="mostrarInfo('dev')" style="cursor: pointer">Desenvolvedor Full Stack</td>
+                        <td>R$ 3.500</td>
+                        <td>R$ 7.000</td>
+                        <td>R$ 12.000</td>
+                    </tr>
+                    <tr>
+                        <td onclick="mostrarInfo('front')" style="cursor: pointer">Desenvolvedor Front-end</td>
+                        <td>R$ 3.000</td>
+                        <td>R$ 6.000</td>
+                        <td>R$ 10.000</td>
+                    </tr>
+                    <tr>
+                        <td onclick="mostrarInfo('back')" style="cursor: pointer">Desenvolvedor Back-end</td>
+                        <td>R$ 3.200</td>
+                        <td>R$ 6.500</td>
+                        <td>R$ 11.000</td>
+                    </tr>
+                    <tr>
+                        <td onclick="mostrarInfo('mobile')" style="cursor: pointer">Desenvolvedor Mobile</td>
+                        <td>R$ 3.800</td>
+                        <td>R$ 7.500</td>
+                        <td>R$ 13.000</td>
+                    </tr>
+                    <tr>
+                        <td onclick="mostrarInfo('devops')" style="cursor: pointer">DevOps Engineer</td>
+                        <td>R$ 4.500</td>
+                        <td>R$ 8.500</td>
+                        <td>R$ 15.000</td>
+                    </tr>
+                    <tr>
+                        <td onclick="mostrarInfo('dados')" style="cursor: pointer">Cientista de Dados</td>
+                        <td>R$ 5.000</td>
+                        <td>R$ 9.000</td>
+                        <td>R$ 16.000</td>
+                    </tr>
+                    <tr>
+                        <td onclick="mostrarInfo('qa')" style="cursor: pointer">Analista de QA</td>
+                        <td>R$ 3.000</td>
+                        <td>R$ 5.500</td>
+                        <td>R$ 9.000</td>
+                    </tr>
+                    <tr>
+                        <td onclick="mostrarInfo('ux')" style="cursor: pointer">UX/UI Designer</td>
+                        <td>R$ 3.200</td>
+                        <td>R$ 6.000</td>
+                        <td>R$ 10.000</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div id="info-cargo" class="info-card" style="display: none; margin-top: 2rem;">
+                <h3 id="cargo-titulo"></h3>
+                <p id="cargo-descricao"></p>
+            </div>
+        </div>
+
+        <div class="navigation">
+            <a href="index.html" class="btn btn-secondary">Voltar ao Início</a>
+        </div>
+    </div>
+
+    <footer>
+        <small>Desenvolvido por Alexandre &copy; 2025</small>
+    </footer>
+
+    <script>
+        function mostrarInfo(cargo) {
+            const infoCard = document.getElementById('info-cargo');
+            const titulo = document.getElementById('cargo-titulo');
+            const descricao = document.getElementById('cargo-descricao');
+
+            infoCard.style.display = 'block';
+
+            switch(cargo) {
+                case 'dev':
+                    titulo.textContent = 'Desenvolvedor Full Stack';
+                    descricao.textContent = 'Profissional completo que trabalha tanto no front-end quanto no back-end. Domina várias tecnologias e frameworks, sendo capaz de desenvolver aplicações web completas.';
+                    break;
+                case 'front':
+                    titulo.textContent = 'Desenvolvedor Front-end';
+                    descricao.textContent = 'Especialista em interfaces e experiência do usuário. Trabalha com HTML, CSS, JavaScript e frameworks modernos como React, Vue.js ou Angular.';
+                    break;
+                case 'back':
+                    titulo.textContent = 'Desenvolvedor Back-end';
+                    descricao.textContent = 'Responsável pela lógica e funcionamento dos sistemas. Trabalha com servidores, bancos de dados e APIs, utilizando linguagens como Python, Java, PHP ou Node.js.';
+                    break;
+                case 'mobile':
+                    titulo.textContent = 'Desenvolvedor Mobile';
+                    descricao.textContent = 'Especializado no desenvolvimento de aplicativos para dispositivos móveis. Trabalha com tecnologias como React Native, Flutter, iOS (Swift) ou Android (Kotlin).';
+                    break;
+                case 'devops':
+                    titulo.textContent = 'DevOps Engineer';
+                    descricao.textContent = 'Profissional que une desenvolvimento e operações. Responsável por automatização, CI/CD, containers e infraestrutura como código.';
+                    break;
+                case 'dados':
+                    titulo.textContent = 'Cientista de Dados';
+                    descricao.textContent = 'Especialista em análise de dados, machine learning e inteligência artificial. Trabalha com Python, R e ferramentas de big data.';
+                    break;
+                case 'qa':
+                    titulo.textContent = 'Analista de QA';
+                    descricao.textContent = 'Responsável pela qualidade do software. Realiza testes manuais e automatizados, garantindo que o produto atenda aos requisitos e padrões de qualidade.';
+                    break;
+                case 'ux':
+                    titulo.textContent = 'UX/UI Designer';
+                    descricao.textContent = 'Profissional que cria interfaces intuitivas e agradáveis. Trabalha com pesquisa de usuários, prototipação e design de interfaces.';
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>

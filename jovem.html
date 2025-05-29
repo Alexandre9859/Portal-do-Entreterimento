@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Espaço Teen</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/index/jovem.ico" type="image/x-icon">
+</head>
+<body class="jovem">
+    <div class="container jovem-content">
+        <h1>Zona Jovem</h1>
+        <p>Explore as melhores séries do momento</p>
+
+        <div class="series-selection">
+            <div class="radio-group">
+                <input type="radio" name="serie" value="stranger" onchange="serie()" id="opcao1">
+                <label for="opcao1">Breaking Bad</label>
+            </div>
+            
+            <div class="radio-group">
+                <input type="radio" name="serie" value="riverdale" onchange="serie()" id="opcao2">
+                <label for="opcao2">Better Call Saul</label>
+            </div>
+            
+            <div class="radio-group">
+                <input type="radio" name="serie" value="cobra" onchange="serie()" id="opcao3">
+                <label for="opcao3">Supernatural</label>
+            </div>
+        </div>
+
+        <div class="serie-card">
+            <img id="foto" src="img/index/tv.jpeg" alt="Imagem da série" width="300">
+            <div class="serie-info">
+                <p id="p1">Selecione uma série para ver mais informações</p>
+                <p id="span1"></p>
+                <a href="#" class="btn btn-watch">Assistir Agora</a>
+            </div>
+        </div>
+
+        <div class="navigation">
+            <a href="index.html" class="btn btn-secondary">Voltar ao Início</a>
+        </div>
+  </div>
+
+  <footer>
+        <small>Desenvolvido por Alexandre &copy; 2025</small>
+  </footer>
+
+    <script src="script/script.js"></script>
+</body>
+</html>

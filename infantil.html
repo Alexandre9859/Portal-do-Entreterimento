@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Universo Infantil</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/index/infantil.ico" type="image/x-icon">
+</head>
+<body class="infantil">
+    <div class="container infantil-content">
+        <h1>🌈 Mundo Mágico dos Desenhos 🌟</h1>
+        <p>Escolha seu desenho favorito e embarque em uma aventura incrível!</p>
+
+        <div class="form-group">
+            <select id="desenho" onchange="mostrarDesenho()" class="btn">
+                <option value="">Escolha seu Desenho</option>
+               <option value="ben10">Ben 10 👽</option> 
+                <option value="picapau">Pica Pau 🐦</option>
+                <option value="superchoque">Super Choque ⚡</option>
+            </select>
+        </div>
+
+        <div class="desenho-container">
+            <div class="desenho-card">
+                <img id="img" src="img/index/tv.jpeg" alt="Imagem do desenho" width="300">
+                <div class="desenho-info">
+                    <h3 id="titulo-desenho">Escolha um desenho</h3>
+                    <p id="descricao-desenho"></p>
+                    <div class="button-group">
+                        <a id="trailer" href="#" target="_blank" class="btn btn-watch">Assistir</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="navigation">
+            <a href="index.html" class="btn btn-secondary">Voltar ao Início</a>
+        </div>
+    </div>
+
+    <footer>
+        <small>Desenvolvido por Alexandre &copy; 2025</small>
+    </footer>
+
+    <script>
+        function mostrarDesenho() {
+            const desenho = document.getElementById('desenho').value;
+            const img = document.getElementById('img');
+            const titulo = document.getElementById('titulo-desenho');
+            const descricao = document.getElementById('descricao-desenho');
+            const trailer = document.getElementById('trailer');
+
+            if (desenho === 'ben10') {
+                img.src = 'img/criança/2.jpeg';
+                titulo.textContent = 'Ben 10';
+                descricao.textContent = 'Ben Tennyson encontra um dispositivo alienígena chamado Omnitrix que lhe permite se transformar em diferentes criaturas alienígenas.';
+                trailer.href = 'https://www.youtube.com/watch?v=kLaF9b6wmrg';
+            } else if (desenho === 'picapau') {
+                img.src = 'img/criança/1.jpeg';
+                titulo.textContent = 'Pica Pau';
+                descricao.textContent = 'As divertidas aventuras do pássaro mais famoso dos desenhos animados, sempre com suas travessuras e piadas.';
+                trailer.href = 'https://www.youtube.com/watch?v=PBCsu_ylh8c';
+            } else if (desenho === 'superchoque') {
+                img.src = 'img/criança/3.jpeg';
+                titulo.textContent = 'Super Choque';
+                descricao.textContent = 'Virgil Hawkins ganha poderes elétricos após um acidente químico e se torna o Super Choque, protegendo Dakota City.';
+                trailer.href = 'https://www.youtube.com/watch?v=cmCRyIxBE3s';
+            } else {
+                img.src = 'img/index/tv.jpeg';
+                titulo.textContent = 'Escolha um desenho';
+                descricao.textContent = '';
+                trailer.href = '#';
+            }
+        }
+    </script>
+</body>
+</html>
