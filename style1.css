@@ -1,0 +1,554 @@
+/* Estilos Globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* Estilos específicos para cada página */
+/* Página Principal */
+body.principal {
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+}
+
+.welcome-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 90vh;
+    padding: 2rem;
+}
+
+.welcome-title {
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    animation: fadeInDown 1s ease;
+    color: #000;
+}
+
+.age-input-container {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 500px;
+    animation: fadeIn 1s ease;
+    backdrop-filter: blur(10px);
+}
+
+.age-input-container h2,
+.age-input-container p,
+.age-input-container label {
+    color: #000000;
+}
+
+/* Página Infantil */
+body.infantil {
+    background: linear-gradient(45deg, #FF61D2, #FE9090, #FFF94C, #4FFBDF);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.infantil-content {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 1200px;
+    border: 3px solid #FF61D2;
+    box-shadow: 0 0 20px rgba(255, 97, 210, 0.3);
+}
+
+.infantil-content h1 {
+    background: linear-gradient(45deg, #FF61D2, #FE9090, #FFF94C, #4FFBDF);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: none;
+    font-size: 2.5em;
+    font-weight: bold;
+    animation: gradientBG 15s ease infinite;
+}
+
+.infantil-content h2 {
+    color: #FF61D2;
+    text-shadow: 2px 2px 4px rgba(255, 97, 210, 0.2);
+}
+
+.infantil-content h3 {
+    color: #FE9090;
+    text-shadow: 2px 2px 4px rgba(254, 144, 144, 0.2);
+}
+
+.infantil-content p {
+    background: linear-gradient(45deg, #4FFBDF, #FFF94C);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.form-group select {
+    background: white;
+    color: #FF61D2;
+    border: 2px solid #4FFBDF;
+    font-weight: bold;
+}
+
+.form-group select option {
+    color: #FE9090;
+    background: white;
+    font-weight: bold;
+}
+
+/* Inputs na página principal */
+.principal input[type="number"],
+.principal input[type="text"],
+.principal select {
+    background: white;
+    color: #000000;
+    border: 2px solid #FF61D2;
+}
+
+.principal input::placeholder {
+    color: #666666;
+}
+
+.desenho-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.desenho-card {
+    background: linear-gradient(135deg, #fff, #f0f0f0);
+    border-radius: 15px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 15px rgba(255, 97, 210, 0.2);
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.desenho-card:hover {
+    transform: translateY(-5px) scale(1.02);
+    border-color: #FF61D2;
+    box-shadow: 0 8px 25px rgba(255, 97, 210, 0.3);
+}
+
+/* Página Jovem */
+body.jovem {
+    background: #2c3e50;
+    color: white;
+}
+
+.jovem-content {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.jovem-content h1,
+.jovem-content h2,
+.jovem-content h3,
+.jovem-content p,
+.jovem-content label {
+    color: white;
+}
+
+.serie-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 2rem;
+    margin: 1rem 0;
+    transition: all 0.3s ease;
+    color: white;
+}
+
+.serie-card:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-5px);
+}
+
+/* Página Adulto */
+body.adulto {
+    background: linear-gradient(to right, #232526, #414345);
+    color: white;
+}
+
+.adulto-content h1,
+.adulto-content h2,
+.adulto-content h3,
+.adulto-content p {
+    color: white;
+}
+
+.movie-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    color: white;
+}
+
+.movie-card h3 {
+    color: white !important;
+    margin-bottom: 1rem;
+}
+
+.movie-card p {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Botões */
+.btn {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    margin: 0.5rem;
+    color: white;
+}
+
+.btn-primary {
+    background: linear-gradient(45deg, #4FFBDF, #FF61D2);
+    color: #000;
+    font-weight: bold;
+}
+
+.btn-secondary {
+    background: linear-gradient(45deg, #e74c3c, #c0392b);
+}
+
+.btn-watch {
+    background: linear-gradient(45deg, #27ae60, #2ecc71);
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Inputs */
+input[type="number"],
+input[type="text"],
+select {
+    width: 100%;
+    max-width: 300px;
+    padding: 1rem;
+    margin: 1rem 0;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+input[type="number"]::placeholder,
+input[type="text"]::placeholder,
+select::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+input[type="number"]:focus,
+input[type="text"]:focus,
+select:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 15px rgba(52, 152, 219, 0.3);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem;
+    color: rgba(255, 255, 255, 0.7);
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer small {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Tabelas */
+table {
+    width: 100%;
+    max-width: 800px;
+    margin: 2rem auto;
+    border-collapse: collapse;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    overflow: hidden;
+    color: white;
+}
+
+th, td {
+    padding: 1rem;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+th {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .welcome-title {
+        font-size: 2.5rem;
+    }
+
+    .age-input-container {
+        width: 95%;
+    }
+
+    .btn {
+        width: 100%;
+        margin: 0.5rem 0;
+    }
+}
+
+/* Estilo comum para todos os títulos */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    text-align: center;
+    margin: 20px 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Estilos para tabelas */
+table, th, td {
+    border: solid 2px;
+    border-collapse: collapse;
+    padding: 8px;
+}
+
+/* Estilos da página inicial */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+}
+
+.welcome-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.welcome-title {
+    color: #2c3e50;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.age-input-container {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.age-input-container label {
+    display: block;
+    margin-bottom: 10px;
+    color: #34495e;
+    font-size: 1.1em;
+}
+
+.age-input-container input[type="number"] {
+    padding: 10px;
+    font-size: 1em;
+    border: 2px solid #3498db;
+    border-radius: 5px;
+    width: 150px;
+    margin-bottom: 15px;
+}
+
+.age-input-container input[type="button"] {
+    background-color: #3498db;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.age-input-container input[type="button"]:hover {
+    background-color: #2980b9;
+}
+
+footer {
+    text-align: center;
+    margin-top: 50px;
+    color: #7f8c8d;
+    font-size: 0.9em;
+}
+
+/* Estilos específicos para página infantil */
+.pagina-infantil h1 { color: #FF6B6B; }
+.pagina-infantil h2 { color: #4ECDC4; }
+.pagina-infantil p { color: #45B7D1; }
+.pagina-infantil li { color: #96CEB4; }
+
+/* Estilos específicos para página jovem */
+.pagina-jovem h1 { color: #2C3E50; }
+.pagina-jovem h2 { color: #34495E; }
+.pagina-jovem p { color: #7F8C8D; }
+.pagina-jovem li { color: #95A5A6; }
+
+/* Estilos específicos para página adulto */
+.pagina-adulto table {
+    background-color: #f5f5f5;
+}
+.pagina-adulto th {
+    background-color: #e0e0e0;
+}
+.pagina-adulto td {
+    background-color: #ffffff;
+}
+
+/* Tabela de Salários */
+.salary-table {
+    width: 100%;
+    max-width: 1000px;
+    margin: 2rem auto;
+    border-collapse: collapse;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.salary-table th,
+.salary-table td {
+    padding: 1rem;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+.salary-table th {
+    background: rgba(0, 0, 0, 0.3);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.salary-table td:first-child {
+    text-align: left;
+    font-weight: bold;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.salary-table td:first-child:hover {
+    background: rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+}
+
+/* Card de Informações */
+.info-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 15px;
+    margin: 2rem auto;
+    max-width: 800px;
+    backdrop-filter: blur(10px);
+    animation: fadeIn 0.3s ease;
+}
+
+.info-card h3 {
+    color: white;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.info-card p {
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.6;
+    font-size: 1.1rem;
+}
+
+/* Ajuste das descrições dos desenhos */
+.desenho-info {
+    padding: 1rem;
+    background: linear-gradient(135deg, #FF61D2, #4FFBDF);
+    border-radius: 10px;
+    margin-top: 1rem;
+}
+
+.desenho-info h3 {
+    color: #fff;
+    font-size: 1.5em;
+    margin-bottom: 0.5rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.desenho-info p {
+    color: #fff;
+    font-size: 1.1em;
+    line-height: 1.4;
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
